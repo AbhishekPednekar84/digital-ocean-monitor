@@ -1,2 +1,13 @@
-# digital-ocean-monitor
-Script to monitor and reboot a droplet
+# DigitalOcean droplet monitor
+The script checks the status of a website hosted on a DigitalOcean droplet using `requests.get`. If the returned HTTP status code is not `200`, then the script proceeds to reboot the droplet. Notifications are sent to a configured Slack channel.
+
+## Steps to run the script
+1. Create and activate a virtual environment. Ex: `python -m venv venv`
+2. Install the requirements - `pip install -r requirements.txt`
+3. Create a .env file and set the following environment variables -
+   - AUTHORIZATION_KEY (from DigitalOcean)</b >
+   - SLACK_AUTH_TOKEN (from Slack)</b >
+   - SLACK_CHANNEL_ID</b > 
+   - DROPLET_NAME (to be rebooted)</b >
+   - WEBSITE_URL (to be monitored)
+4. Run the code using the command - `python monitor.py`
