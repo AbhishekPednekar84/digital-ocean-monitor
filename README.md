@@ -1,4 +1,4 @@
-# DigitalOcean droplet monitor
+# DigitalOcean Droplet Monitor
 The script checks the status of a website hosted on a DigitalOcean droplet using `requests.get`. If the returned HTTP status code is not `200`, then the script proceeds to reboot the droplet. Notifications are sent to a configured Slack channel.
 
 ## Steps to run the script
