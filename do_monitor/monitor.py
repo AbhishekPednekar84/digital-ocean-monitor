@@ -2,7 +2,7 @@ import requests
 import os
 import time
 from dotenv import load_dotenv
-from notifications.slack_alerts import send_slack_notification
+from do_monitor.notifications.slack_alerts import send_slack_notification
 
 # Load the environment variables
 load_dotenv(".env")
@@ -64,7 +64,7 @@ def check_site_status():
     # Check the status of the website being monitored. The website name is being read from the .env file
     r = requests.get(website_url)
 
-    if r.status_code != 200:
+    if r.status_code == 200:
         reboot_droplet(droplet_id)
 
 
@@ -130,3 +130,4 @@ def reboot_droplet(droplet_id):
 
 if __name__ == "__main__":
     check_site_status()
+
