@@ -11,7 +11,3 @@ The script checks the status of a website hosted on a DigitalOcean droplet using
    - DROPLET_NAME (to be rebooted)</b >
    - WEBSITE_URL (to be monitored)
 4. Run the script using the command - `python -m do_monitor.monitor`
-
-### Sample Slack notification
-
-![Slack](https://github.com/AbhishekPednekar84/digital-ocean-monitor/tree/master/do_monitor/notifications/images/slack.jpg)
